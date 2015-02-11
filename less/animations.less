@@ -1,0 +1,30 @@
+/* animations */
+@p : margin, text-shadow, color, background-color, box-shadow;
+@t : .5s, .26s, .26s, .26s, .26s;
+@f : ease-out, ease-in, ease-in, linear, linear;
+
+a, input, a > span, img
+{
+ -webkit-transition-property:        @p;
+ -webkit-transition-duration:        @t;
+ -webkit-transition-timing-function: @f;
+
+ -o-transition-property:             @p;
+ -o-transition-duration:             @t;
+ -o-transition-timing-function:      @f;
+ 
+ -moz-transition-property:           @p;
+ -moz-transition-duration:           @t;
+ -moz-transition-timing-function:    @f;
+ 
+ transition-property:                @p;
+ transition-duration:                @t;
+ transition-timing-function:         @f;
+}
+
+.animate (){
+	-webkit-transition: all 0.45s ease-out;  /* Chrome, Safari 3.2+ */
+	   -moz-transition: all 0.45s ease-out;  /* Firefox 4-15 */
+	     -o-transition: all 0.45s ease-out;  /* Opera 10.50–12.00 */
+	        transition: all 0.45s ease-out;  /* Firefox 16+, IE 10+, Opera 12.50+ */
+}
