@@ -211,7 +211,7 @@ function get_grid_w(){
 }
 
 function grid_w(){
-	print "col-lg-".get_grid_w()." col-md-".get_grid_w() ;
+	print "col-md-".get_grid_w() ;
 }
 
 function content_w(){

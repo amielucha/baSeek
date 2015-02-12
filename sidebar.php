@@ -5,7 +5,7 @@
  * @package baSeek
  */
 
-if ( ! is_active_sidebar( 'sidebar-main' ) ) {
+if ( ! is_active_sidebar( 'sidebar-main' ) || get_theme_mod( 'sidebar_position' ) === "hidden" ) {
 	return;
 }
 ?>
