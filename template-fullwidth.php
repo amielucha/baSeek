@@ -1,20 +1,16 @@
 <?php
 /**
- * The template for displaying all pages.
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site will use a
- * different template.
  *
  * @package baSeek
+ *
+ * Template Name: Full Width
  */
 
 get_header(); ?>
 
 	<div id="site-container" class="site-container container">
 		<div id="site-row" class="site-row row">
-			<div id="primary" class="content-area <?php content_w() ?>">
+			<div id="primary" class="content-area <?php grid_w() ?>">
 				<main id="main" class="site-main" role="main">
 
 					<?php while ( have_posts() ) : the_post(); ?>
@@ -32,8 +28,6 @@ get_header(); ?>
 
 				</main><!-- #main -->
 			</div><!-- #primary -->
-
-			<?php get_sidebar(); ?>
 
 		</div><!-- #site-row -->
 	</div><!-- #site-container -->
