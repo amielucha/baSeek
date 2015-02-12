@@ -19,21 +19,29 @@ function the_posts_navigation() {
 		return;
 	}
 	?>
-	<nav class="navigation posts-navigation" role="navigation">
-		<h2 class="screen-reader-text"><?php _e( 'Posts navigation', 'baseek' ); ?></h2>
-		<div class="nav-links">
 
-			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( __( 'Older posts', 'baseek' ) ); ?></div>
-			<?php endif; ?>
+	<?php if ( function_exists('wp_pagenavi') ):
 
-			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts', 'baseek' ) ); ?></div>
-			<?php endif; ?>
+		wp_pagenavi();
 
-		</div><!-- .nav-links -->
-	</nav><!-- .navigation -->
-	<?php
+	else: ?>
+
+		<nav class="navigation posts-navigation" role="navigation">
+			<h2 class="screen-reader-text"><?php _e( 'Posts navigation', 'baseek' ); ?></h2>
+			<div class="nav-links">
+
+				<?php if ( get_next_posts_link() ) : ?>
+				<div class="nav-previous"><?php next_posts_link( __( 'Older posts', 'baseek' ) ); ?></div>
+				<?php endif; ?>
+
+				<?php if ( get_previous_posts_link() ) : ?>
+				<div class="nav-next"><?php previous_posts_link( __( 'Newer posts', 'baseek' ) ); ?></div>
+				<?php endif; ?>
+
+			</div><!-- .nav-links -->
+		</nav><!-- .navigation -->
+
+	<?php endif;
 }
 endif;
 
