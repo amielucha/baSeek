@@ -17,3 +17,16 @@ function baseek_jetpack_setup() {
 	) );
 }
 add_action( 'after_setup_theme', 'baseek_jetpack_setup' );
+
+/*
+ * Let Jetpack manage site's logo.
+ * Requires Jetpack plugin (http://jetpack.me).
+ */
+$args = array(
+    'header-text' => array(
+        'site-title',
+        'site-description',
+    ),
+    'size' => 'medium',
+);
+add_theme_support( 'site-logo', $args );

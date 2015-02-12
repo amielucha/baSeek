@@ -9,6 +9,10 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 1200;
 }
 
+if ( ! isset( $content_width ) ) {
+	$sidebar_w = 8;
+}
+
 if ( ! function_exists( 'baseek_setup' ) ) :
 function baseek_setup() {
 
@@ -30,19 +34,6 @@ function baseek_setup() {
 	 * provide it for us.
 	 */
 	add_theme_support( 'title-tag' );
-
-	/*
-	 * Let Jetpack manage site's logo.
-	 * Requires Jetpack plugin (http://jetpack.me).
-	 */
-	$args = array(
-	    'header-text' => array(
-	        'site-title',
-	        'site-description',
-	    ),
-	    'size' => 'medium',
-	);
-	add_theme_support( 'site-logo', $args );
 
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
@@ -226,35 +217,35 @@ function grid_w(){
 function content_w(){
 	if ( get_theme_mod( 'sidebar_position' ) == "hidden" ) {
 		// sidebar hidden
-		echo "col-lg-".(get_grid_w())." col-md-".(get_grid_w());
+		echo "col-md-".(get_grid_w());
 	} elseif ( get_theme_mod( 'sidebar_position' ) == "left" ) {
 		// sidebar on the left
-		echo "col-lg-".(get_grid_w() - get_theme_mod( 'sidebar_w' )." col-lg-push-".get_theme_mod( 'sidebar_w' ))." col-md-".(get_grid_w() - get_theme_mod( 'sidebar_w' )." col-md-push-".get_theme_mod( 'sidebar_w' ));
+		echo "col-md-".(get_grid_w() - get_theme_mod( 'sidebar_w' )." col-md-push-".get_theme_mod( 'sidebar_w' ));
 	} else {
 		// sidebar on the right
-		echo "col-lg-".(get_grid_w() - get_theme_mod( 'sidebar_w' ))." col-md-".(get_grid_w() - get_theme_mod( 'sidebar_w' ));
+		echo "col-md-".(get_grid_w() - get_theme_mod( 'sidebar_w' ));
 	}
 }
 
 function sidebar_w(){
 	if ( get_theme_mod( 'sidebar_position' ) == "left" ) {
 		// sidebar on the left
-		echo "col-lg-".get_theme_mod( 'sidebar_w' )." col-lg-pull-".(get_grid_w() - get_theme_mod( 'sidebar_w' ))." col-md-".get_theme_mod( 'sidebar_w' )." col-md-pull-".(get_grid_w() - get_theme_mod( 'sidebar_w' ));
+		echo "col-md-".get_theme_mod( 'sidebar_w' )." col-md-pull-".(get_grid_w() - get_theme_mod( 'sidebar_w' ));
 	} else {
 		// sidebar on the right
-		echo "col-lg-".get_theme_mod( 'sidebar_w' )." col-md-".get_theme_mod( 'sidebar_w' );
+		echo "col-md-".get_theme_mod( 'sidebar_w' );
 	}
 }
 
 function header_widget_w(){
-	echo "col-lg-".get_theme_mod( 'header_widget_w' )." col-md-".get_theme_mod( 'header_widget_w' );
+	echo "col-md-".get_theme_mod( 'header_widget_w' );
 }
 
 function header_w(){
 	if( is_active_sidebar( 'header-right' ) ) {
-		echo "col-lg-".( get_grid_w() - get_theme_mod( 'header_widget_w' ) )." col-md-".( get_grid_w() - get_theme_mod( 'header_widget_w' ) );
+		echo "col-md-".( get_grid_w() - get_theme_mod( 'header_widget_w' ) );
 	} else {
-		echo "col-lg-".get_grid_w()." col-md-".get_grid_w();
+		echo "col-md-".get_grid_w();
 	}
 }
 
