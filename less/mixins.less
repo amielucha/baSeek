@@ -26,11 +26,32 @@
 
 .desaturate {
 	filter: grayscale(100%);
-	-webkit-filter: grayscale(100%); 
-	-moz-filter: grayscale(100%); 
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
 	-ms-filter: grayscale(100%);
 	-o-filter: grayscale(100%);
-	filter: url(images/desaturate.svg#greyscale); 
+	filter: url(images/desaturate.svg#greyscale);
 	filter: gray;
 	-webkit-filter: grayscale(1);
+}
+
+/*
+ * Padding and margin mixins
+ */
+.p(@p:20px){
+	padding-top:		@p;
+	padding-bottom:	@p;
+}
+
+.pb(@p:20px){
+	padding-bottom:	@p;
+}
+
+.m(@m:20px){
+	padding-top:		@m;
+	padding-bottom:	@m;
+}
+
+.mb(@m:20px){
+	padding-bottom:	@m;
 }
