@@ -8454,6 +8454,10 @@ img {
 /*
  * Padding and margin mixins
  */
+/*
+ * Centered Menu
+ * apply to .main-navigation
+ */
 .iseek-replace {
   display: inline-block;
   vertical-align: middle;

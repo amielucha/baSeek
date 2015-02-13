@@ -26,11 +26,10 @@ add_filter( 'upload_mimes', 'cc_mime_types' );
 /*  display svg images on media uploader and feature images
 /*-----------------------------------------------------------------------------------*/
 function custom_admin_head() {
-  $css = '';
 
   $css = 'td.media-icon img[src$=".svg"] { width: 100% !important; height: auto !important; }';
 
-  echo ''.$css.'';
+  echo '<style>'.$css.'</style>';
 }
 add_action('admin_head', 'custom_admin_head');
 

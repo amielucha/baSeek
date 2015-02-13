@@ -55,3 +55,28 @@
 .mb(@m:20px){
 	padding-bottom:	@m;
 }
+
+/*
+ * Centered Menu
+ * apply to .main-navigation
+ */
+.centered-menu() {
+	.nav-menu {
+		display: block;
+		text-align: center;
+		width: 100%;
+
+		& > .menu-item {
+			display: inline-block;
+			float: none;
+		}
+	}
+}
+
+.right-menu() {
+	.centered-menu();
+
+	.nav-menu{
+		text-align: right;
+	}
+}
