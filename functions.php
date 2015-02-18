@@ -223,6 +223,11 @@ require get_template_directory() . '/inc/jetpack.php';
 require get_template_directory() . '/inc/wp_bootstrap_navwalker.php';
 
 /**
+ * Load WooCommerce integration.
+ */
+require get_template_directory() . '/inc/woocommerce.php';
+
+/**
  * Custom Header
  */
 //require get_template_directory() . '/inc/custom-header.php';
