@@ -27,6 +27,6 @@ $args = array(
         'site-title',
         'site-description',
     ),
-    'size' => 'medium',
+    'size' => 'full',
 );
 add_theme_support( 'site-logo', $args );
