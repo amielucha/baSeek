@@ -58,7 +58,7 @@
 					<?php if (is_active_sidebar( 'bottom' )):
 						dynamic_sidebar( 'bottom' );
 					else: ?>
-						&copy; <?php bloginfo('title'); ?> <?php echo date('Y') ?>
+						&copy; <?php bloginfo('name'); ?> <?php echo date('Y') ?>
 					<?php endif ?>
 				</div>
 				<div class="site-info col-lg-6 col-md-6">
