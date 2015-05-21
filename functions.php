@@ -228,14 +228,8 @@ require get_template_directory() . '/inc/wp_bootstrap_navwalker.php';
 require get_template_directory() . '/inc/woocommerce.php';
 
 /**
- * Custom Header
- */
-//require get_template_directory() . '/inc/custom-header.php';
-
-/**
  * Grid functions
  */
-
 function o(){
 	return get_option("baseek"); //get options specified via customizer plugin
 }
