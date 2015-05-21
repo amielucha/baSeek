@@ -55,7 +55,11 @@
 		<div id="colophon" class="site-footer container" role="contentinfo">
 			<div class="row">
 				<div class="col-lg-18 col-md-18">
-					<?php if (is_active_sidebar( 'bottom' )){ dynamic_sidebar( 'bottom' ); } ?>
+					<?php if (is_active_sidebar( 'bottom' )):
+						dynamic_sidebar( 'bottom' );
+					else: ?>
+						&copy; <?php bloginfo('title'); ?> <?php echo date('Y') ?>
+					<?php endif ?>
 				</div>
 				<div class="site-info col-lg-6 col-md-6">
 					<?php printf( __('<a href="%1$s" title="%2$s" target="_blank" class="iseek-link">%3$s <span id="iseek-replace" class="iseek-replace">iSeek.ie</span></a>', 'baseek'), 'http://www.iseek.ie', 'Seek Internet Solutions, Fermoy, Cork, Ireland', 'Irish Websites by ' ); ?>
