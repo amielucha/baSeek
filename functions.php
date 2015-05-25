@@ -109,26 +109,26 @@ function baseek_widgets_init() {
 		'after_title' => '</h1>',
 	) );
 
-	register_sidebar( array(
+	/*register_sidebar( array(
 		'name' => __( 'Header Right', 'baseek' ),
 		'id' => 'header-right',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => '</aside>',
 		'before_title' => '<h1 class="widget-title">',
 		'after_title' => '</h1>',
-	) );
+	) );*/
 
-	register_sidebar( array(
+	/*register_sidebar( array(
 		'name' => __( 'Home Before Content', 'baseek' ),
 		'id' => 'before-content',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => '</aside>',
 		'before_title' => '<h1 class="widget-title">',
 		'after_title' => '</h1>',
-	) );
+	) );*/
 
 	/* homepage can have up to 4 columns with main widgets */
-	register_sidebars(
+	/*register_sidebars(
 		4,
 		array(
 			'name' => __( 'Home Widget %d', 'baseek' ),
@@ -147,7 +147,7 @@ function baseek_widgets_init() {
 		'after_widget' => '</aside>',
 		'before_title' => '<h1 class="widget-title">',
 		'after_title' => '</h1>',
-	) );
+	) );*/
 
 	register_sidebars(
 		4,
